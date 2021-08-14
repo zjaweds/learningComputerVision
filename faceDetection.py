@@ -20,8 +20,6 @@ while True:
                                         flags = cv.CASCADE_SCALE_IMAGE)
     for (x,y,w,h) in faces:
         cv.rectangle(frame, (x,y),(x+w, y+h), (0,255,0),2)
-        faceROI = frame[y:y+h,x:x+w]
-        eyes = eyeCascade.detectMultiScale(faceROI)
         
     cv.imshow('Video',frame)
     # cv.waitKey()
