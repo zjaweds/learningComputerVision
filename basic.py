@@ -1,5 +1,5 @@
-import cv2
-
+import cv2 as cv
+import numpy as np
 # img = cv.imread('Photos/cat1.webp',-1)
 # cv.imshow('Cat',img)
 
@@ -22,7 +22,8 @@ import cv2
 
 # cv.destroyAllWindows()
 
-img = cv2.imread(r'Photos/cat1.webp')  
-# save image  
-status = cv2.imwrite(r'Photos/cat1.webp',img)  
-print("Image written sucess? : ", status)
+img = cv.imread(r'Photos/cat1.webp')  
+blue = img[100,100,0]
+img[100,100] = [100,100,255]
+# img.item(10,10,2)
+print (img.dtype)
